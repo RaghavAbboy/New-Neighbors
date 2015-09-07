@@ -77,7 +77,7 @@
                   </li>
                 </ul>
               </div>
-             
+
               <!--end of rent/buy section -->
               <div class="grid-content medium-1">
                 <label>Bed:</label>
@@ -163,16 +163,17 @@
               </div>
             </div> <!-- end filter section -->
 
-           
+
             <hr>
 
-            <!-- Remove -->
-            <pre>{{main.address}}</pre>
+            <div class = "grid-block small-12 medium-12" ng-if="main.filteredNeighborhoodArray.length === 0">No Neighborhoods Found</div>
+
 
             <div class="grid-block small-11 small-up-1 medium-12 medium-up-3 align-center shrink"> <!-- start glance-card-results section -->
               <!---single glance card start-->
 
               <div class="grid-block shrink" ng-repeat="neighborhood in main.filteredNeighborhoodArray | orderBy:main.filterType">
+
                 <div class="card glance-card" ng-click="main.selectNeighborhood(neighborhood)">
                   <div class="card-divider glance-background">
                       {{neighborhood.name}}
